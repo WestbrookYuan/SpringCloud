@@ -1,0 +1,35 @@
+server:
+  port: 8081
+spring:
+  jpa:
+    # ???spring???????????false
+    generate-ddl: true
+    # ????????sql???false
+    show-sql: true
+    # ???????
+    hibernate:
+      ddl-auto: none
+  # ???
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/SpringCloud?useUnicode=true&characterEncoding=utf-8&userSSL=false&serverTimezone=GMT&allowPublicKeyRetrieval=true
+    username: root
+    password: 12345678
+# ??
+logging:
+  pattern:
+    console: level-%level %msg%n
+  level:
+    # ????????
+    root: info
+    # hibernate logging level
+    org.hibernate: info
+    # our own code debug level
+    com.yty: debug
+    # when show-sql: true, print out dynamic parameter
+    org.hibernate.type.descriptor.sql.BasicBinder: trace
+    # when show-sql: true, print out result
+    org.hibernate.type.descriptor.sql.BasicExtractor: trace
+
+
