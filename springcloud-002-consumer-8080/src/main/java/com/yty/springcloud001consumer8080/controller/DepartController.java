@@ -2,10 +2,14 @@ package com.yty.springcloud001consumer8080.controller;
 
 import com.yty.springcloud001consumer8080.bean.Depart;
 import jakarta.annotation.Resource;
+import org.springframework.cloud.client.ServiceInstance;
+import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * @author yty

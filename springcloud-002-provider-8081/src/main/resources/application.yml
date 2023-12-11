@@ -26,6 +26,7 @@ spring:
         server-addr: localhost:8848
         username: nacos
         password: nacos
+        # enabled: false
 # ??
 logging:
   pattern:
